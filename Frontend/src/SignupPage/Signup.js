@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Signup(){
     const instagramIconStyle = {
         backgroundImage: "url('https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png')",
-        backgroundPosition: '0px 10px',
+        backgroundPosition: '0px 0px',
         backgroundSize: '170px 180px',
         width: '170px',
         height: '60px',
@@ -26,7 +26,7 @@ function Signup(){
                 Sign up to see photos and videos from your friends.
             </div>
 
-            <button className='facebookLogIn'>
+            <button className='facebookLogIn2'>
                 <FaFacebook size="20" color='#fff' />
                 <span>Log in with Facebook</span>
             </button>

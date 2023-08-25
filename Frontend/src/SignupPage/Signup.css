@@ -111,7 +111,7 @@
     margin-inline: 1rem;
   }
   
-  .facebookLogIn{
+  .facebookLogIn2{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +127,7 @@
     
   }
   
-  span{
+  .facebookLogIn2 span{
     font-weight: bolder;
   
     padding-left: 10px;

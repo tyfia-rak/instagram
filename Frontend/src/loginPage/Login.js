@@ -11,9 +11,9 @@ function Login() {
     const instagramIconStyle = {
         backgroundImage: "url('https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png')",
         backgroundPosition: '0px 0px',
-        backgroundSize: '240px 270px',
-        width: '250px',
-        height: '75px',
+        backgroundSize: '170px 180px',
+        width: '170px',
+        height: '60px',
         backgroundRepeat: 'no-repeat',
         display: 'inline-block'
       };
@@ -21,7 +21,12 @@ function Login() {
   return (
     <div className="App">
         <header className="App-header">
-            <div aria-label="Instagram" role="img" style={instagramIconStyle}></div>
+            <div 
+                aria-label="Instagram" 
+                role="img" 
+                style={instagramIconStyle}>
+
+            </div>
             <div className="identifiants">
                 <input type="email" placeholder="Phone number, username, or email" value={Email} onChange={e=> setEmail(e.target.value)}/>
                 <input type='password' placeholder='Password'value={Pass}/>
@@ -36,7 +41,7 @@ function Login() {
             </div>
 
             <button className='facebookLogIn'>
-                <FaFacebook size="30" color='#094074'/>
+                <FaFacebook size="20" color='#094074'/>
                 <span>Log in with Facebook</span>
             </button>
 
