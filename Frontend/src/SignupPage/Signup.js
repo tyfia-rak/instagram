@@ -52,8 +52,8 @@ function Signup(){
         </header>
         
         <footer>
-            <div className='login'>
-                <p>Already have an account?<Link className='log' to='/Login'>Log in</Link></p>
+            <div className=''>
+                <p>Already have an account?<Link to='/Login'>Log in</Link></p>
             </div>
         </footer>
             

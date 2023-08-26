@@ -29,7 +29,7 @@ function Login() {
             </div>
             <div className="identifiants">
                 <input type="email" placeholder="Phone number, username, or email" value={Email} onChange={e=> setEmail(e.target.value)}/>
-                <input type='password' placeholder='Password'value={Pass}/>
+                <input type='password' placeholder='Password'value={Pass} onChange={e=> setPass(e.target.value)}/>
             </div>
 
             <button className='login' onClick={() => {}}>
