@@ -3,9 +3,9 @@ import "./Login.css"
 import { FaFacebook } from 'react-icons/fa';
 
 function Login() {
-    const [Pass,setPass] = useState("bidy");
+    const [Pass,setPass] = useState("");
 
-    const [Email,setEmail] = useState("bidy");
+    const [Email,setEmail] = useState("");
 
     const instagramIconStyle = {
         backgroundImage: "url('https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png')",
@@ -23,7 +23,7 @@ function Login() {
             <div aria-label="Instagram" role="img" style={instagramIconStyle}></div>
             <div className="identifiants">
                 <input type="email" placeholder="Phone number, username, or email" value={Email} onChange={e=> setEmail(e.target.value)}/>
-                <input type='password' placeholder='Password'value={Pass}/>
+                <input type='password' placeholder='Password'value={Pass} onChange={e=> setPass(e.target.value)}/>
             </div>
 
             <button className='login' onClick={() => {}}>
