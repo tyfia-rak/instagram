@@ -28,9 +28,6 @@
 
   border: 1px solid #d6cfcb;
 
-  padding-block: 1.6rem;
-
-
 }
 
 .identifiants{
@@ -42,7 +39,6 @@
 input{
   border: 1px solid #d6cfcb;
   border-radius: 0.1rem;
-  
 
   height: 2rem;
   width: 15.5rem;
@@ -108,7 +104,6 @@ hr{
   border: none;
 
 }
-
 
 span{
   font-weight: bolder;

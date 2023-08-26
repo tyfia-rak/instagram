@@ -51,7 +51,7 @@ function Login() {
         </header>
 
         <footer>
-            <div className='login'>
+            <div className=''>
                 <p>Don't have an account?<Link className='log' to='/Signup'>Sign up</Link></p>
             </div>
         </footer>
