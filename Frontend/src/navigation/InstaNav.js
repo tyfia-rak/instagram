@@ -7,47 +7,57 @@ import SlideshowIcon from '@mui/icons-material/Slideshow';
 import ChatIcon from '@mui/icons-material/Chat';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+
 
 function InstaNav() {
   return (
     <div className='instaNav'>
-        <img className='instaNav_logo' src='https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png' />
-        <div className='instaNav_buttons'>
-            <button className='instaNav_button'>
-                <HomeIcon className='icone'/>
-                <span>Home</span>
+        <img className='instaNav_logo' src='https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png' /> 
+        <div className='btn'>
+            <Link to = '/HomePage'>
+                <button>
+                    <HomeIcon className='icon'/>
+                    Home 
+                </button>
+            </Link>
+            <button>
+                <SearchIcon className='icon'/>
+                Search
             </button>
-            <button className='instaNav_button'>
-                <SearchIcon className='icone'/>
-                <span>Search</span>
+            <button>
+                <ExploreIcon className='icon'/>
+                Explore
             </button>
-            <button className='instaNav_button'>
-                <ExploreIcon className='icone'/>
-                <span>Explore</span>
+            <button>
+                <SlideshowIcon className='icon'/>
+                Reels
             </button>
-            <button className='instaNav_button'>
-                <SlideshowIcon className='icone'/>
-                <span>Vidéo</span>
+            <button>
+                <ChatIcon className='icon'/>
+                Messages
             </button>
-            <button className='instaNav_button'>
-                <ChatIcon className='icone'/>
-                <span>Message</span>
+            <button>
+                <FavoriteBorderIcon className='icon'/>
+                Notification
             </button>
-            <button className='instaNav_button'>
-                <FavoriteBorderIcon className='icone'/>
-                <span>Favorite</span>
+            <button>
+                <AddCircleOutlineIcon className='icon'/>
+                Create
             </button>
-            <button className='instaNav_button'>
-                <AddCircleOutlineIcon className='icone'/>
-                <span>Story</span>
-            </button>
+            <Link to='/ProfilPage'>
+                <button>
+                    <AccountCircleIcon className='icon'/>
+                    Profil
+                </button>
+            </Link>
         </div>
-        <div className='instaNav_more'>
-            <button className='instaNav_button'>
-                    <MenuIcon className='icone'/>
-                    <span>More</span>
-            </button>
+
+        <div className='menu'>
+            <MenuIcon className='icon'/>
+            More
         </div>
     </div>
   )

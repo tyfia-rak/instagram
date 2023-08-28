@@ -1,6 +1,7 @@
 import React from 'react'
 import "./ProfilPage.css"
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import InstaNav from '../navigation/InstaNav';
 
 function ProfilPage() {
     const user = {
@@ -14,6 +15,9 @@ function ProfilPage() {
 
   return (
     <div className="profile">
+        <div className='navbar'>
+            <InstaNav/>
+        </div>
         <div className="profile-header">
             <img className="profile-avatar" src="D:\Media\Frontend\public\image2.png" alt="Profile Avatar"/>
             <div className='profil-header-AllAbout'>
