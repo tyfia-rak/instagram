@@ -8,11 +8,7 @@ import InstaNav from './navigation/InstaNav'
 function HomePage() {
   return (
     <div className='home_body'>
-      <InstaNav/>        
-      <div className='stories'>
-        <div className='profil_1'>
-        </div>
-      </div>
+      <InstaNav/>
     </div>
   )
 }

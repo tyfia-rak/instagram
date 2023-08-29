@@ -12,14 +12,13 @@
 
     padding-inline: 1em;
 
-    width: 15%;
+    width: 20%;
     height: 100vh;
 
     gap: 0.2rem;
 
     z-index: 1;
-
-    border-right: 1px solid #d6cfcb;
+    border-right: 1px solid;
 }
 
 .btn{

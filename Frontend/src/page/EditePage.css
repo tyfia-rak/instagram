@@ -7,8 +7,11 @@
 .Edit_logo {
     width: 70px;
 }
+.EditPage{
+    display: flex;
+    flex-direction: row;
+}
 
-/* Style for the whole page */
 .block_page {
     font-family: "Helvetica Neue", sans-serif;
     display: flex;
@@ -34,7 +37,7 @@
     width: 30%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: start;
 }
 
 .Edite_profil_nav_text {
@@ -66,6 +69,7 @@
 }
 
 .title_edit {
+    text-align: start;
     padding-left: 30px;
     font-size: 24px;
     margin-bottom: 20px;
@@ -93,6 +97,7 @@
 .Edite_page_description{
     display: flex;
     justify-content: flex-end;
+    text-align: end;
     width: 30%;
     gap: 20px;
 }
@@ -100,6 +105,7 @@
 .Edite_box_text{
     display: flex;
     flex-direction: column;
+    text-align: start;
     width: 50%;
 }
 
@@ -125,13 +131,13 @@
 .Edite_checkBox_description {
     padding-left: 20px;
     display: flex;
-    justify-self: flex-end;
+    text-align: end;
     width: 30%;
 }
 
 .Edite_Checkbox{
     display: flex;
-    align-items: flex-start;
+    text-align: start;
     flex-direction: row;
     width: 50%;
 }

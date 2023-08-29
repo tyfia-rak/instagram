@@ -21,9 +21,9 @@ function Login() {
   return (
     <div className="App">
         <header className="App-header">
-            <div 
-                aria-label="Instagram" 
-                role="img" 
+            <div
+                aria-label="Instagram"
+                role="img"
                 style={instagramIconStyle}>
 
             </div>

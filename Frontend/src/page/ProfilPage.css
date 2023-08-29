@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
-.profile {
+.profile{
     display: flex;
+    flex-direction: row;
+}
+
+.blockprofile {
+    display: flex;
+    width: 80%;
     align-items: center;
     flex-direction: column;
 }
