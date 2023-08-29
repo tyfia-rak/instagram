@@ -1,7 +1,7 @@
 import {prisma} from "../../lib/db";
 import {badRequestError, notFoundError, conflictError} from "../../util/error";
 import {omit} from "../../util/object-util";
-import {CreateUserDto, UpdateUserDto} from "./schema";
+import {CreateUserDto, LoginDto, UpdateUserDto} from "./schema";
 import {hash, compare} from "bcrypt";
 
 // TODO: use dedicated `mapper` to map from internal object to rest object
@@ -90,4 +90,26 @@ export const updateUser = async (data: UpdateUserDto) => {
     data: user,
   });
   return omit(record, ["password"]);
+};
+
+export const login = async (data: LoginDto) => {
+  const {email, password} = data;
+
+  const user = await prisma.user.findUnique({
+    where: {
+      email,
+    },
+  });
+
+  if (!user) {
+    throw notFoundError("User", "email", email);
+  }
+
+  const match = await compare(password, user.password);
+
+  if (!match) {
+    throw badRequestError("Password should match to complete the change");
+  }
+
+  return omit(user, ["password"]);
 };

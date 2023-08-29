@@ -1,6 +1,6 @@
 import {FastifyRequest} from "fastify";
-import {CreateUserDto, UpdateUserDto} from "./schema";
-import {createUser, getUserById, getUsers, updateUser} from "./service";
+import {CreateUserDto, LoginDto, UpdateUserDto} from "./schema";
+import {createUser, getUserById, getUsers, login, updateUser} from "./service";
 
 export const getUsersHandler = async () => {
   return await getUsers();
@@ -30,4 +30,12 @@ export const updateUserHandler = async (
   }>
 ) => {
   return await updateUser(req.body);
+};
+
+export const loginHandler = async (
+  req: FastifyRequest<{
+    Body: LoginDto;
+  }>
+) => {
+  return await login(req.body);
 };

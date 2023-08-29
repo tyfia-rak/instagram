@@ -1,6 +1,5 @@
 *{
     padding-top: 0;
-    width: 100%;
     font-family: inherit, sans-serif;
 }
 
@@ -29,7 +28,7 @@
     
 }
 
-button{
+.menu-item{
     display: inline-flex;
     align-items: center;
     
@@ -47,10 +46,10 @@ button{
 
 }
 
-button:hover{
+.menu-item:hover{
     scale: 1.04;
     transition-duration: 0.3s;
-
+    cursor: pointer;
     background-color: #d6cfcb2f;
     border-radius: 0.3em;
 

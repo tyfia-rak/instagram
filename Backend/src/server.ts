@@ -19,7 +19,6 @@ export const buildServer = (opts: Record<string, unknown> = {}) => {
   });
 
   server.register(cors);
-
   // do not want to use prefix here
   server.register(commentRoutes);
   server.register(postRoutes);

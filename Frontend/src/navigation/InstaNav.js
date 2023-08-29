@@ -9,58 +9,65 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../store/auth.store';
+import { Button } from '@mui/material';
 
 
 function InstaNav() {
-  return (
-    <div className='instaNav'>
-        <img className='instaNav_logo' src='https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png' /> 
-        <div className='btn'>
-            <Link to = '/HomePage'>
-                <button>
-                    <HomeIcon className='icon'/>
-                    Home 
-                </button>
-            </Link>
-            <button>
-                <SearchIcon className='icon'/>
-                Search
-            </button>
-            <button>
-                <ExploreIcon className='icon'/>
-                Explore
-            </button>
-            <button>
-                <SlideshowIcon className='icon'/>
-                Reels
-            </button>
-            <button>
-                <ChatIcon className='icon'/>
-                Messages
-            </button>
-            <button>
-                <FavoriteBorderIcon className='icon'/>
-                Notification
-            </button>
-            <button>
-                <AddCircleOutlineIcon className='icon'/>
-                Create
-            </button>
-            <Link to='/ProfilPage'>
-                <button>
-                    <AccountCircleIcon className='icon'/>
-                    Profil
-                </button>
-            </Link>
-        </div>
+    const navigate = useNavigate();
+    const logout = useAuthStore(state => state.logout);
 
-        <div className='menu'>
-            <MenuIcon className='icon'/>
-            More
+    const handleLogout = () => {
+        logout();
+        navigate('/login');
+    }
+
+    return (
+        <div className='instaNav'>
+            <img className='instaNav_logo' src='https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png' />
+            <div className='btn'>
+                <Link to='/HomePage' className='menu-item'>
+                    <HomeIcon className='icon' />
+                    Home
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <SearchIcon className='icon' />
+                    Search
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <ExploreIcon className='icon' />
+                    Explore
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <SlideshowIcon className='icon' />
+                    Reels
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <ChatIcon className='icon' />
+                    Messages
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <FavoriteBorderIcon className='icon' />
+                    Notification
+                </Link>
+                <Link to='/HomePage' className='menu-item'>
+                    <AddCircleOutlineIcon className='icon' />
+                    Create
+                </Link>
+                <Link to='/ProfilPage' className='menu-item'>
+                    <AccountCircleIcon className='icon' />
+                    Profil
+                </Link>
+            </div>
+
+            <div className='menu'>
+                <Button type='submit' onClick={handleLogout}>
+                    Se deconnecter
+                </Button>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default InstaNav

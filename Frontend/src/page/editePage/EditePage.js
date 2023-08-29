@@ -5,12 +5,16 @@ import GppGoodIcon from '@mui/icons-material/GppGood';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Avatar } from '@mui/material';
 import { TextField } from '@mui/material';
-import { Checkbox } from '@mui/material';
+import InstaNav from '../../navigation/InstaNav';
+import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
-import InstaNav from '../navigation/InstaNav';
+import { useAuthStore } from '../../store/auth.store';
+
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
+
 function EditePage() {
+    const auth = useAuthStore(state => state.auth);
     return (
         <div className='EditPage'>
             <InstaNav />
@@ -69,7 +73,7 @@ function EditePage() {
                                 />
                             </div>
                             <div className='Edite_box_text'>
-                                <p> Tyfia rakoto </p>
+                                <p> {auth?.username} </p>
                                 <p> Modifier profil </p>
                             </div>
                         </div>
@@ -78,7 +82,9 @@ function EditePage() {
                                 <p>Site web</p>
                             </div>
                             <div className='Edite_box_text'>
-                                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                                <Button className='disablebutton' variant="contained" disabled>
+                                    Site web
+                                </Button>
                                 <p>
                                     La modification des liens est disponible uniquement sur mobile.
                                     Rendez-vous sur l’application Instagram et modifiez votre profil
@@ -88,19 +94,19 @@ function EditePage() {
                         </div>
                         <div className='Edite_page_bio'>
                             <div className='Edite_page_description'>
-                                <p>Site web</p>
+                                <p>Bio</p>
                             </div>
                             <div className='Edite_box_text'>
-                                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                                <TextField id="outlined-basic" label="Bio" variant="outlined" />
                                 <p>0/150</p>
                             </div>
                         </div>
                         <div className='Edite_page_genre'>
                             <div className='Edite_page_description'>
-                                <p>Site web</p>
+                                <p>Genre</p>
                             </div>
                             <div className='Edite_box_text'>
-                                <TextField id="outlined-basic" label="Outlined" variant="outlined" className='field_text' />
+                                <TextField id="outlined-basic" label="Genre" variant="outlined" className='field_text' />
                                 <p>Ceci ne sera pas affiché sur votre profil public.</p>
                             </div>
                         </div>
@@ -109,7 +115,7 @@ function EditePage() {
                                 <p>Afficher les suggestions de compte sur les profils</p>
                             </div>
                             <div className='Edite_Checkbox'>
-                                <Checkbox {...label} />
+                                <Checkbox {...label} className='checkbox' />
                                 <p>
                                     Choisissez si les personnes peuvent voir des suggestions de comptes
                                     similaires sur votre profil et si votre compte peut être suggéré sur d’autres profils.
@@ -117,7 +123,7 @@ function EditePage() {
                             </div>
                         </div>
                         <div className='Edite_submit_button'>
-                            
+                            <Button variant="outlined">Outlined</Button>
                         </div>
                     </div>
                 </div>

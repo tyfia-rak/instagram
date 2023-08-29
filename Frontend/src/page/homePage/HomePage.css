@@ -1,0 +1,17 @@
+.homePage{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bloc_home{
+    padding-top: 22px;
+}
+
+.nav_home{
+    margin-top: 36px;
+}
+
+.nav_Profil{
+    margin-top: 36px;
+}

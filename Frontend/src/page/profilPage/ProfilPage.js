@@ -1,43 +1,44 @@
 import React from 'react'
 import "./ProfilPage.css"
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
-import InstaNav from '../navigation/InstaNav';
+import InstaNav from '../../navigation/InstaNav';
+import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../../store/auth.store';
+import IconProfile from '../../assets/image/iconeProfil.png'
+
 
 function ProfilPage() {
-    const user = {
-        username: 'Insta',
-        fullName: 'Instagram',
-        bio: 'elle est trop belle',
-        followers: 1000,
-        following: 200,
-        posts: 150,
-    };
+    const navigate = useNavigate();
+    const handleEdite = () => {
+        navigate("/EditPage")
+    }
 
+    const auth = useAuthStore(state => state.auth);
+    console.log(auth)
     return (
         <div className="profile">
             <InstaNav />
-            <div className='blockProfil'>
+            <div className='blockprofile'>
                 <div className="profile-header">
-                    <img className="profile-avatar" src="D:\Media\Frontend\public\image2.png" alt="Profile Avatar" />
+                    <img className="profile-avatar" src={IconProfile} alt="Profile Avatar" />
                     <div className='profil-header-AllAbout'>
                         <div className='profil-header-target'>
-                            <h2 className="profile-username">{user.username}</h2>
-                            <button className='buttonTarget'>
-                                following
+                            <h2 className="profile-username">{auth?.username}</h2>
+                            <button className='buttonTarget' onClick={handleEdite}>
+                                Modifier profil
                             </button>
                             <button className='buttonTarget'>
-                                Message
+                                Voir Archive
                             </button>
                             <button className='buttonAdd'>
                                 <PersonAddIcon />
                             </button>
                         </div>
                         <div className='profil-header-About'>
-                            <p className='About'>{user.posts} posts</p>
-                            <p className='About'>{user.followers} followers</p>
-                            <p className='About'>{user.following} following</p>
+                            <p className='About'>{auth?.posts} posts</p>
+                            <p className='About'>{auth?.followers} followers</p>
+                            <p className='About'>{auth?.following} following</p>
                         </div>
-                        <p>{user.fullName}</p>
                     </div>
                 </div>
                 <hr className='hr'></hr>

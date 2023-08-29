@@ -126,6 +126,7 @@
 .Edite_page_checkBox {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .Edite_checkBox_description {
@@ -159,4 +160,9 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.checkbox{
+    height: 25px;
+    width: 25px;
 }
