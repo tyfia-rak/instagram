@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async () => {
     const res = await AuthLogin(login);
     if (res) {
-      navigate('/')
+      navigate('/HomePage')
     } else {
       Swal.fire({
         icon: 'error',
