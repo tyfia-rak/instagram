@@ -4,7 +4,7 @@ import { FaFacebook } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { Stack, TextField } from '@mui/material';
 import { handleRegister } from '../../helpers/auth.helper';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { instagramIconStyle } from '../../assets/image/insta';
 
 const Signup = () => {
